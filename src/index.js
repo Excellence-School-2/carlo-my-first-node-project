@@ -11,7 +11,10 @@ myPlayers.push({"id": 5, "name": "Roberto", "surname": "Baggio"})
 
 app.use(express.json())
 
-app.get("/", (req, res)=>{
+app.use(express.static('public'))
+
+
+app.get("/hello-world", (req, res)=>{
     res.status(201).send("Ciao Mondo!!")
 })
 
